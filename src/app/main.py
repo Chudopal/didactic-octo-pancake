@@ -13,9 +13,10 @@ def index():
 
 @app.route('/add')
 def add():
+    """Add two digits."""
     return str(
-        request.args.get("a") +
-        request.args.get("b")
+        int(request.args.get("a")) +
+        int(request.args.get("b"))
     )
 
 if __name__ == "__main__":
